@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap');
+@font-face{
+    font-family:'CCWildWords';
+    src:url('Fontes/CCWildWords-Roman.woff') format('woff');
+    font-weight:400;
+    font-style:normal;
+    font-display:swap;
+}
 
 /* ======================================== */
 /* ALTERAÇÃO 21/08 - DESIGN DO CATÁLOGO */
@@ -15,9 +21,9 @@
     --wr-branco:#f5f7ff;
     --wr-nevoa:#bdc8e6;
     --wr-borda:#52638d;
-    --fonte-jojo:'Cinzel Decorative', Georgia, serif;
-    --fonte-destaque:'Bebas Neue', Impact, sans-serif;
-    --fonte-texto:'Montserrat', Arial, sans-serif;
+    --fonte-jojo:'CCWildWords', 'Trebuchet MS', sans-serif;
+    --fonte-destaque:'CCWildWords', 'Trebuchet MS', sans-serif;
+    --fonte-texto:'CCWildWords', 'Trebuchet MS', sans-serif;
 }
 
 
