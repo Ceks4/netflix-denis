@@ -335,3 +335,21 @@ body{
     }
 
 }
+
+/* TEMA BIZARRO - LOGIN EM ESTILO DE QUADRINHOS */
+:root{--jojo-rosa:#ff2f92;--jojo-roxo:#702bbd;--jojo-ciano:#55d9ff;--jojo-preto:#080711}
+body{background:radial-gradient(circle at 14% 80%,rgba(112,43,189,.54),transparent 33%),linear-gradient(120deg,rgba(8,7,17,.94),rgba(20,24,59,.76),rgba(255,47,146,.22)),url("Imagens/imagem banner.jpg");overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.17;background-image:radial-gradient(circle,var(--jojo-ciano) 1px,transparent 1.5px);background-size:13px 13px}
+.topoLogin{position:relative;z-index:3;border-bottom:3px solid var(--jojo-rosa);box-shadow:0 5px 0 var(--jojo-preto)}
+.logoImagem{filter:drop-shadow(4px 5px 0 var(--jojo-preto)) drop-shadow(-2px -1px 0 var(--jojo-ciano))}
+.areaLogin{position:relative;z-index:2}
+.caixaLogin{border:5px solid var(--jojo-preto);border-radius:0!important;box-shadow:12px 12px 0 var(--jojo-roxo),17px 17px 0 var(--jojo-preto);clip-path:polygon(0 0,94% 0,100% 7%,100% 100%,7% 100%,0 93%);background:linear-gradient(145deg,rgba(27,37,65,.97),rgba(8,7,17,.97))!important;transform:rotate(-.6deg)}
+.caixaLogin h1{text-transform:uppercase;text-shadow:3px 3px 0 var(--jojo-roxo)}
+.seloParte{display:inline-block;margin-bottom:13px;background:var(--jojo-rosa);color:#fff;border:2px solid var(--jojo-preto);box-shadow:4px 4px 0 var(--jojo-preto);clip-path:polygon(7% 0,100% 0,93% 100%,0 100%);padding:6px 16px;letter-spacing:1.2px;text-transform:uppercase;font-size:12px}
+.grupoInput input{border:3px solid var(--jojo-preto)!important;border-radius:0!important;box-shadow:4px 4px 0 var(--jojo-roxo);background:#151b36!important}
+.grupoInput input:focus{border-color:var(--jojo-ciano)!important;box-shadow:5px 5px 0 var(--jojo-rosa)!important}
+.botaoPrincipal{border:3px solid var(--jojo-preto)!important;border-radius:0!important;background:linear-gradient(135deg,var(--jojo-rosa),var(--jojo-roxo))!important;box-shadow:6px 6px 0 var(--jojo-preto);clip-path:polygon(5% 0,100% 0,95% 100%,0 100%);text-transform:uppercase}
+.botaoPrincipal:hover{background:var(--jojo-ciano)!important;color:var(--jojo-preto)!important;transform:translate(-2px,-2px)!important;box-shadow:9px 9px 0 var(--jojo-preto)}
+.mangaSfx{position:fixed;right:4vw;top:24vh;z-index:1;color:var(--jojo-rosa);font-size:clamp(70px,13vw,180px);font-weight:900;letter-spacing:-20px;opacity:.36;pointer-events:none;transform:rotate(-11deg);-webkit-text-stroke:4px var(--jojo-preto);text-shadow:9px 9px 0 var(--jojo-roxo);animation:ameaca 2.2s ease-in-out infinite alternate}
+@keyframes ameaca{to{transform:rotate(-7deg) scale(1.04);opacity:.5}}
+@media(max-width:600px){.caixaLogin{transform:none}.mangaSfx{top:15vh;right:8vw;font-size:76px}.areaLogin{padding-bottom:55px}}

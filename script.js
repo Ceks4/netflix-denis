@@ -7,9 +7,13 @@ import { filmes, series } from "./filmes.js";
     function criarCard(item, tipo){
 
         return `
-            <div class="card">
+            <div class="card card-${tipo}">
+
+                <span class="seloCard">${tipo === "filme" ? "FILME" : "SÉRIE"}</span>
     
-                <img src="${item.imagem}" alt="${item.titulo}">
+                <div class="capaCard">
+                    <img src="${item.imagem}" alt="${item.titulo}">
+                </div>
     
                 <h3>${item.titulo}</h3>
     

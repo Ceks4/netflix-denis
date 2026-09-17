@@ -174,13 +174,22 @@ function criarCard(item, tipo){
 
     return `
 
-        <div class="cardCatalogo">
+        <div class="cardCatalogo card-${tipo}">
 
+            <span class="seloCard">
 
-            <img
-                src="${item.imagem}"
-                alt="${item.titulo}"
-            >
+                ${tipo === "filme" ? "FILME" : "SÉRIE"}
+
+            </span>
+
+            <div class="capaCard">
+
+                <img
+                    src="${item.imagem}"
+                    alt="${item.titulo}"
+                >
+
+            </div>
 
 
 

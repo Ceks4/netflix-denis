@@ -657,3 +657,30 @@ body{
 
 
 }
+
+/* TEMA BIZARRO - CATÁLOGO EM ESTILO DE QUADRINHOS */
+:root{--jojo-rosa:#ff2f92;--jojo-roxo:#702bbd;--jojo-ciano:#55d9ff;--jojo-preto:#080711}
+body{background:radial-gradient(circle at 5% 20%,rgba(112,43,189,.3),transparent 30%),radial-gradient(circle at 92% 30%,rgba(255,47,146,.2),transparent 26%),linear-gradient(135deg,#080711,#121938 55%,#080711);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;opacity:.14;background-image:radial-gradient(circle,var(--jojo-ciano) 1px,transparent 1.5px);background-size:13px 13px;pointer-events:none}
+.navbarCatalogo{border-bottom:3px solid var(--jojo-rosa);box-shadow:0 5px 0 var(--jojo-preto),0 9px 0 rgba(85,217,255,.6)}
+.logoImagem{filter:drop-shadow(4px 5px 0 var(--jojo-preto)) drop-shadow(-2px -1px 0 var(--jojo-ciano))}
+.menuCatalogo button{border-radius:0!important;text-transform:uppercase;clip-path:polygon(8% 0,100% 0,92% 100%,0 100%)}
+.menuCatalogo button:hover,.menuCatalogo button.ativo{background:var(--jojo-rosa)!important;color:#fff!important;box-shadow:4px 4px 0 var(--jojo-preto)}
+.pesquisa input{border:3px solid var(--jojo-preto)!important;border-radius:0!important;box-shadow:4px 4px 0 var(--jojo-roxo)}
+.fotoPerfil{border:3px solid var(--jojo-rosa)!important;border-radius:0!important;transform:rotate(4deg);box-shadow:4px 4px 0 var(--jojo-preto)}
+.cabecalhoCatalogo{position:relative;border-left:8px solid var(--jojo-rosa);padding-left:22px;transform:rotate(-.5deg)}
+.cabecalhoCatalogo h1{text-transform:uppercase;text-shadow:4px 4px 0 var(--jojo-roxo),7px 7px 0 var(--jojo-preto)}
+.seloParte,.seloCard{display:inline-block;background:var(--jojo-rosa);color:#fff;border:2px solid var(--jojo-preto);box-shadow:4px 4px 0 var(--jojo-preto);clip-path:polygon(7% 0,100% 0,93% 100%,0 100%);padding:6px 16px;letter-spacing:1.5px;text-transform:uppercase}
+.cabecalhoCatalogo .seloParte{margin-bottom:14px}
+.gridCatalogo{gap:30px 24px!important}
+.card{position:relative;border:3px solid var(--jojo-preto)!important;border-radius:0!important;overflow:visible!important;background:linear-gradient(155deg,#27304d,#10162c)!important;box-shadow:7px 7px 0 var(--jojo-roxo),11px 11px 0 var(--jojo-preto);clip-path:polygon(0 0,92% 0,100% 7%,100% 100%,8% 100%,0 93%)}
+.card:hover{transform:translateY(-10px) rotate(-1deg)!important;box-shadow:10px 13px 0 var(--jojo-rosa),14px 17px 0 var(--jojo-preto)!important}
+.capaCard{height:310px;overflow:hidden;border-bottom:3px solid var(--jojo-preto)}
+.capaCard img,.card img{width:100%;height:100%;object-fit:cover;transition:transform .45s,filter .45s}
+.card:hover .capaCard img{transform:scale(1.08);filter:saturate(1.3) contrast(1.08)}
+.seloCard{position:absolute;z-index:3;top:10px;left:-7px;padding:4px 12px;font-size:11px;box-shadow:3px 3px 0 var(--jojo-preto)}
+.btnPlay{border:3px solid var(--jojo-preto)!important;border-radius:0!important;background:linear-gradient(135deg,var(--jojo-rosa),var(--jojo-roxo))!important;box-shadow:5px 5px 0 var(--jojo-preto);clip-path:polygon(7% 0,100% 0,93% 100%,0 100%);text-transform:uppercase}
+.btnPlay:hover{background:var(--jojo-ciano)!important;color:var(--jojo-preto)!important;transform:translate(-2px,-2px)!important}
+.mangaSfx{position:fixed;right:2vw;top:18vh;z-index:2;color:var(--jojo-rosa);font-size:clamp(60px,10vw,145px);font-weight:900;letter-spacing:-18px;opacity:.3;pointer-events:none;transform:rotate(-9deg);-webkit-text-stroke:3px var(--jojo-preto);text-shadow:8px 8px 0 var(--jojo-roxo);animation:ameaca 2.2s ease-in-out infinite alternate}
+@keyframes ameaca{to{transform:rotate(-6deg) scale(1.04);opacity:.46}}
+@media(max-width:700px){.mangaSfx{top:13vh;right:7vw;font-size:70px}.cabecalhoCatalogo h1{font-size:36px}.capaCard{height:280px}}
