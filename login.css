@@ -1,355 +1,139 @@
 @font-face{
     font-family:'CCWildWords';
     src:url('Fontes/CCWildWords-Roman.woff') format('woff');
-    font-weight:400;
-    font-style:normal;
     font-display:swap;
 }
 
-/* ============================================ */
-/* ALTERAÇÃO 21/08 - DESIGN DA TELA DE LOGIN */
-/* ============================================ */
-
 :root{
-    --wr-fundo:#0e1529;
-    --wr-painel:rgba(14,21,41,0.94);
-    --wr-superficie:#27304d;
-    --wr-azul:#6f91e8;
-    --wr-lilas:#9a86d9;
-    --wr-dourado:#d9bd73;
-    --wr-branco:#f5f7ff;
-    --wr-nevoa:#bdc8e6;
-    --wr-borda:#52638d;
-    --fonte-jojo:'CCWildWords', 'Trebuchet MS', sans-serif;
-    --fonte-destaque:'CCWildWords', 'Trebuchet MS', sans-serif;
-    --fonte-texto:'CCWildWords', 'Trebuchet MS', sans-serif;
+    --fundo:#0b0a0f;
+    --superficie:#15131a;
+    --superficie-clara:#1d1a23;
+    --texto:#f5f3f7;
+    --texto-suave:#aaa5b1;
+    --borda:#38333e;
+    --rosa:#e23b86;
+    --rosa-claro:#f06ca8;
+    --fonte-destaque:'CCWildWords','Arial Narrow',sans-serif;
+    --fonte-texto:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 }
 
-
-*{
-
-    margin:0;
-
-    padding:0;
-
-    box-sizing:border-box;
-
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-
-    font-family:var(--fonte-texto);
-
-
-    background:
-        linear-gradient(
-            rgba(8,13,26,0.8),
-            rgba(14,21,41,0.88)
-        ),
-        url("Imagens/imagem banner.jpg");
-
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-attachment:fixed;
-
-
-    color:var(--wr-branco);
-
-
     min-height:100vh;
-
+    background:
+        linear-gradient(90deg,rgba(8,7,11,.96),rgba(8,7,11,.76)),
+        url('Imagens/imagem banner.jpg') center/cover fixed;
+    color:var(--texto);
+    font-family:var(--fonte-texto);
 }
 
-
-/* ALTERAÇÃO 21/08 - LOGO */
+button,input,select{font:inherit}
+.mangaSfx{display:none}
 
 .topoLogin{
-
-    padding:25px 60px;
-
-}
-
-
-.logo{
-
-    color:var(--wr-dourado);
-
-    font-family:var(--fonte-jojo);
-
-    font-size:32px;
-
-    font-weight:bold;
-
-    letter-spacing:2px;
-
-    text-decoration:none;
-
-    display:inline-flex;
-
+    height:76px;
+    padding:0 5vw;
+    display:flex;
     align-items:center;
-
-    line-height:0;
-
+    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(11,10,15,.7);
 }
 
-.logoImagem{
-
-    display:block;
-
-    width:240px;
-
-    height:auto;
-
-}
-
-
-
-/* ALTERAÇÃO 21/08 - ÁREA CENTRAL */
+.logo{display:flex;align-items:center;line-height:0}
+.logoImagem{display:block;width:190px;height:auto}
 
 .areaLogin{
-
-    min-height:calc(100vh - 90px);
-
-
+    min-height:calc(100vh - 76px);
+    padding:48px 20px;
     display:flex;
-
-    justify-content:center;
-
     align-items:center;
-
-
-    padding:30px;
-
+    justify-content:center;
 }
-
-
-
-/* ALTERAÇÃO 21/08 - CAIXA DE LOGIN */
 
 .caixaLogin{
-
-    width:100%;
-
-    max-width:430px;
-
-
-    background:var(--wr-painel);
-
-
-    padding:45px;
-
-
-    border-radius:8px;
-
+    width:min(100%,430px);
+    padding:34px;
+    background:rgba(21,19,26,.97);
+    border:1px solid var(--borda);
+    border-radius:7px;
+    box-shadow:0 24px 60px rgba(0,0,0,.45);
 }
 
-
-
-/* ALTERAÇÃO 21/08 - BOTÕES ENTRAR / CADASTRO */
+.seloParte{
+    display:block;
+    margin-bottom:20px;
+    color:var(--rosa-claro);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
 
 .opcoesLogin{
-
     display:flex;
-
-    margin-bottom:35px;
-
+    gap:22px;
+    margin-bottom:28px;
+    border-bottom:1px solid var(--borda);
 }
-
 
 .opcoesLogin button{
-
-    width:50%;
-
-    font-family:var(--fonte-destaque);
-
-    letter-spacing:0.8px;
-
-
-    border:none;
-
-
-    background:var(--wr-superficie);
-
-    color:var(--wr-nevoa);
-
-
-    padding:13px;
-
-
+    position:relative;
+    padding:0 0 12px;
+    background:transparent;
+    border:0;
+    color:var(--texto-suave);
     cursor:pointer;
-
-    font-size:15px;
-
+    font-size:14px;
 }
 
-
-.opcoesLogin .opcaoAtiva{
-
-    background:var(--wr-azul);
-
-    color:var(--wr-branco);
-
-}
-
-
-
-/* ALTERAÇÃO 21/08 - TEXTOS */
+.opcoesLogin .opcaoAtiva{color:#fff}
+.opcoesLogin .opcaoAtiva::after{content:'';position:absolute;inset:auto 0 -1px;height:2px;background:var(--rosa)}
 
 .caixaLogin h1{
-
-    font-family:var(--fonte-jojo);
-
-    margin-bottom:8px;
-
-}
-
-
-.subtitulo{
-
-    color:var(--wr-nevoa);
-
-    margin-bottom:25px;
-
-}
-
-
-.caixaLogin label{
-
-    display:block;
-
-
-    margin-top:15px;
-
     margin-bottom:7px;
-
+    font-family:var(--fonte-destaque);
+    font-size:31px;
+    font-weight:400;
 }
 
+.subtitulo{margin-bottom:23px;color:var(--texto-suave);font-size:14px;line-height:1.5}
+.caixaLogin label{display:block;margin:15px 0 7px;color:#d4d0d7;font-size:12px;font-weight:600}
 
-
-/* ALTERAÇÃO 21/08 - CAMPOS */
-
-.caixaLogin input,
-.caixaLogin select{
-
+.caixaLogin input,.caixaLogin select{
     width:100%;
-
-
-    padding:13px;
-
-
-    background:var(--wr-superficie);
-
-
-    border:1px solid var(--wr-borda);
-
-    border-radius:5px;
-
-
-    color:var(--wr-branco);
-
-
-    outline:none;
-
+    height:43px;
+    padding:0 12px;
+    background:#100f13;
+    border:1px solid var(--borda);
+    border-radius:4px;
+    outline:0;
+    color:var(--texto);
+    transition:border-color .2s;
 }
 
-
-.caixaLogin input:focus,
-.caixaLogin select:focus{
-
-    border-color:var(--wr-lilas);
-
-}
-
-
-
-/* ALTERAÇÃO 21/08 - BOTÃO PRINCIPAL */
+.caixaLogin input:focus,.caixaLogin select:focus{border-color:#706778}
 
 .botaoPrincipal{
-
     width:100%;
-
-    font-family:var(--fonte-destaque);
-
-    letter-spacing:1px;
-
-
-    margin-top:25px;
-
-
-    padding:13px;
-
-
-    background:var(--wr-azul);
-
-
-    color:var(--wr-branco);
-
-
-    border:none;
-
-    border-radius:5px;
-
-
-    font-size:16px;
-
-    font-weight:bold;
-
-
+    margin-top:24px;
+    padding:12px;
+    background:var(--rosa);
+    border:0;
+    border-radius:4px;
+    color:#fff;
     cursor:pointer;
-
+    font-weight:700;
+    transition:background .2s,transform .2s;
 }
 
-
-.botaoPrincipal:hover{
-
-    background:var(--wr-lilas);
-
-}
-
-
-
-/* ALTERAÇÃO 21/08 - ESCONDER CADASTRO */
-
-.formEscondido{
-
-    display:none;
-
-}
+.botaoPrincipal:hover{background:var(--rosa-claro);transform:translateY(-1px)}
+.formEscondido{display:none}
 
 @media(max-width:600px){
-
-    .topoLogin{
-
-        padding:20px 25px;
-
-    }
-
-    .logoImagem{
-
-        width:175px;
-
-    }
-
+    .topoLogin{height:66px;padding:0 20px}
+    .logoImagem{width:150px}
+    .areaLogin{min-height:calc(100vh - 66px);padding:28px 16px}
+    .caixaLogin{padding:26px 22px}
 }
 
-/* TEMA BIZARRO - LOGIN EM ESTILO DE QUADRINHOS */
-:root{--jojo-rosa:#ff2f92;--jojo-roxo:#702bbd;--jojo-ciano:#55d9ff;--jojo-preto:#080711}
-body{background:radial-gradient(circle at 14% 80%,rgba(112,43,189,.54),transparent 33%),linear-gradient(120deg,rgba(8,7,17,.94),rgba(20,24,59,.76),rgba(255,47,146,.22)),url("Imagens/imagem banner.jpg");overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.17;background-image:radial-gradient(circle,var(--jojo-ciano) 1px,transparent 1.5px);background-size:13px 13px}
-.topoLogin{position:relative;z-index:3;border-bottom:3px solid var(--jojo-rosa);box-shadow:0 5px 0 var(--jojo-preto)}
-.logoImagem{filter:drop-shadow(4px 5px 0 var(--jojo-preto)) drop-shadow(-2px -1px 0 var(--jojo-ciano))}
-.areaLogin{position:relative;z-index:2}
-.caixaLogin{border:5px solid var(--jojo-preto);border-radius:0!important;box-shadow:12px 12px 0 var(--jojo-roxo),17px 17px 0 var(--jojo-preto);clip-path:polygon(0 0,94% 0,100% 7%,100% 100%,7% 100%,0 93%);background:linear-gradient(145deg,rgba(27,37,65,.97),rgba(8,7,17,.97))!important;transform:rotate(-.6deg)}
-.caixaLogin h1{text-transform:uppercase;text-shadow:3px 3px 0 var(--jojo-roxo)}
-.seloParte{display:inline-block;margin-bottom:13px;background:var(--jojo-rosa);color:#fff;border:2px solid var(--jojo-preto);box-shadow:4px 4px 0 var(--jojo-preto);clip-path:polygon(7% 0,100% 0,93% 100%,0 100%);padding:6px 16px;letter-spacing:1.2px;text-transform:uppercase;font-size:12px}
-.grupoInput input{border:3px solid var(--jojo-preto)!important;border-radius:0!important;box-shadow:4px 4px 0 var(--jojo-roxo);background:#151b36!important}
-.grupoInput input:focus{border-color:var(--jojo-ciano)!important;box-shadow:5px 5px 0 var(--jojo-rosa)!important}
-.botaoPrincipal{border:3px solid var(--jojo-preto)!important;border-radius:0!important;background:linear-gradient(135deg,var(--jojo-rosa),var(--jojo-roxo))!important;box-shadow:6px 6px 0 var(--jojo-preto);clip-path:polygon(5% 0,100% 0,95% 100%,0 100%);text-transform:uppercase}
-.botaoPrincipal:hover{background:var(--jojo-ciano)!important;color:var(--jojo-preto)!important;transform:translate(-2px,-2px)!important;box-shadow:9px 9px 0 var(--jojo-preto)}
-.mangaSfx{position:fixed;right:4vw;top:24vh;z-index:1;color:var(--jojo-rosa);font-size:clamp(70px,13vw,180px);font-weight:900;letter-spacing:-20px;opacity:.36;pointer-events:none;transform:rotate(-11deg);-webkit-text-stroke:4px var(--jojo-preto);text-shadow:9px 9px 0 var(--jojo-roxo);animation:ameaca 2.2s ease-in-out infinite alternate}
-@keyframes ameaca{to{transform:rotate(-7deg) scale(1.04);opacity:.5}}
-@media(max-width:600px){.caixaLogin{transform:none}.mangaSfx{top:15vh;right:8vw;font-size:76px}.areaLogin{padding-bottom:55px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
