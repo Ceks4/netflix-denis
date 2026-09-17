@@ -1,5 +1,5 @@
 // ==============================================
-// ALTERAÇÃO 21/08 - CATÁLOGO PRINCIPAL CINEFIX
+// ALTERAÇÃO 21/08 - CATÁLOGO PRINCIPAL BIZARREFLIX
 // ==============================================
 
 
@@ -43,7 +43,7 @@ function pegarFavoritos(){
 
     const dados =
         localStorage.getItem(
-            "cinefixFavoritos"
+            "bizarreflixFavoritos"
         );
 
 
@@ -69,7 +69,7 @@ function salvarFavoritos(lista){
 
     localStorage.setItem(
 
-        "cinefixFavoritos",
+        "bizarreflixFavoritos",
 
         JSON.stringify(lista)
 
