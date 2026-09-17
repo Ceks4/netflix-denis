@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap');
+
 /* ============================================ */
 /* ALTERAÇÃO 21/08 - DESIGN DA TELA DE LOGIN */
 /* ============================================ */
@@ -12,6 +14,9 @@
     --wr-branco:#f5f7ff;
     --wr-nevoa:#bdc8e6;
     --wr-borda:#52638d;
+    --fonte-jojo:'Cinzel Decorative', Georgia, serif;
+    --fonte-destaque:'Bebas Neue', Impact, sans-serif;
+    --fonte-texto:'Montserrat', Arial, sans-serif;
 }
 
 
@@ -28,10 +33,7 @@
 
 body{
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family:var(--fonte-texto);
 
 
     background:
@@ -69,6 +71,8 @@ body{
 .logo{
 
     color:var(--wr-dourado);
+
+    font-family:var(--fonte-jojo);
 
     font-size:32px;
 
@@ -138,6 +142,10 @@ body{
 
     width:50%;
 
+    font-family:var(--fonte-destaque);
+
+    letter-spacing:0.8px;
+
 
     border:none;
 
@@ -170,6 +178,8 @@ body{
 /* ALTERAÇÃO 21/08 - TEXTOS */
 
 .caixaLogin h1{
+
+    font-family:var(--fonte-jojo);
 
     margin-bottom:8px;
 
@@ -239,6 +249,10 @@ body{
 .botaoPrincipal{
 
     width:100%;
+
+    font-family:var(--fonte-destaque);
+
+    letter-spacing:1px;
 
 
     margin-top:25px;

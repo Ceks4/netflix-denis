@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap');
+
 /* ======================================== */
 /* ALTERAÇÃO 21/08 - DESIGN DO CATÁLOGO */
 /* ======================================== */
@@ -13,6 +15,9 @@
     --wr-branco:#f5f7ff;
     --wr-nevoa:#bdc8e6;
     --wr-borda:#52638d;
+    --fonte-jojo:'Cinzel Decorative', Georgia, serif;
+    --fonte-destaque:'Bebas Neue', Impact, sans-serif;
+    --fonte-texto:'Montserrat', Arial, sans-serif;
 }
 
 
@@ -29,10 +34,7 @@
 
 body{
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family:var(--fonte-texto);
 
 
     background:var(--wr-fundo);
@@ -93,6 +95,8 @@ body{
 
     color:var(--wr-dourado);
 
+    font-family:var(--fonte-jojo);
+
 
     font-size:28px;
 
@@ -122,6 +126,10 @@ body{
 .menuCatalogo button{
 
     background:none;
+
+    font-family:var(--fonte-destaque);
+
+    letter-spacing:0.8px;
 
     color:var(--wr-nevoa);
 
@@ -342,6 +350,8 @@ body{
 
 .cabecalhoConteudo h1{
 
+    font-family:var(--fonte-jojo);
+
     font-size:32px;
 
 }
@@ -445,6 +455,10 @@ body{
 
 .infoCard h3{
 
+    font-family:var(--fonte-destaque);
+
+    letter-spacing:0.5px;
+
     font-size:16px;
 
     margin-bottom:10px;
@@ -513,6 +527,10 @@ body{
 .assistirCatalogo{
 
     flex:1;
+
+    font-family:var(--fonte-destaque);
+
+    letter-spacing:0.6px;
 
     background:var(--wr-azul);
 

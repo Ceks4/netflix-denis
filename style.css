@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@700;900&family=Montserrat:wght@400;500;600;700&display=swap');
+
 /* PALETA WEATHER REPORT */
 :root{
     --wr-noite:#080d1a;
@@ -10,6 +12,9 @@
     --wr-dourado:#d9bd73;
     --wr-branco:#f5f7ff;
     --wr-nevoa:#bdc8e6;
+    --fonte-jojo:'Cinzel Decorative', Georgia, serif;
+    --fonte-destaque:'Bebas Neue', Impact, sans-serif;
+    --fonte-texto:'Montserrat', Arial, sans-serif;
 }
 
 /* RESET */
@@ -20,7 +25,7 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:var(--fonte-texto);
     background:var(--wr-fundo);
     color:var(--wr-branco);
 }
@@ -44,6 +49,7 @@ body{
 
 .logo{
     color:var(--wr-dourado);
+    font-family:var(--fonte-jojo);
     font-size:30px;
     font-weight:bold;
     letter-spacing:2px;
@@ -77,6 +83,7 @@ body{
 }
 
 .banner h1{
+    font-family:var(--fonte-jojo);
     font-size:56px;
     margin-bottom:20px;
 }
@@ -90,6 +97,8 @@ body{
 
 /* BOTÃO */
 .btnAssistir{
+    font-family:var(--fonte-destaque);
+    letter-spacing:1px;
     background:var(--wr-azul);
     color:var(--wr-branco);
     border:none;
@@ -119,6 +128,8 @@ body{
 }
 
 .lista h2{
+    font-family:var(--fonte-destaque);
+    letter-spacing:1px;
     margin-bottom:18px;
     font-size:24px;
 }
@@ -167,6 +178,8 @@ body{
 
 /* TEXTO */
 .card h3{
+    font-family:var(--fonte-destaque);
+    letter-spacing:0.5px;
     font-size:16px;
     margin:10px;
 
@@ -202,6 +215,8 @@ body{
 }
 
 .botoes button{
+    font-family:var(--fonte-destaque);
+    letter-spacing:0.6px;
     border:none;
     padding:8px;
     border-radius:5px;
@@ -290,6 +305,7 @@ body{
 
 
 .infoPlayer h1{
+    font-family:var(--fonte-jojo);
     font-size:38px;
     margin-bottom:15px;
 }
@@ -309,6 +325,8 @@ body{
 /* BOTÃO VOLTAR */
 
 .voltar{
+    font-family:var(--fonte-destaque);
+    letter-spacing:0.7px;
     color:var(--wr-branco);
 
     text-decoration:none;
@@ -331,6 +349,8 @@ body{
 /* BOTÃO PLAY DOS CARDS */
 
 .btnPlay{
+    font-family:var(--fonte-destaque);
+    letter-spacing:0.7px;
     background:var(--wr-azul);
 
     color:var(--wr-branco);
