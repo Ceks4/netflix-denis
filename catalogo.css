@@ -2,6 +2,19 @@
 /* ALTERAÇÃO 21/08 - DESIGN DO CATÁLOGO */
 /* ======================================== */
 
+:root{
+    --wr-fundo:#0e1529;
+    --wr-nav:rgba(14,21,41,0.95);
+    --wr-superficie:#27304d;
+    --wr-card:#1b2541;
+    --wr-azul:#6f91e8;
+    --wr-lilas:#9a86d9;
+    --wr-dourado:#d9bd73;
+    --wr-branco:#f5f7ff;
+    --wr-nevoa:#bdc8e6;
+    --wr-borda:#52638d;
+}
+
 
 *{
 
@@ -22,9 +35,9 @@ body{
         sans-serif;
 
 
-    background:#141414;
+    background:var(--wr-fundo);
 
-    color:white;
+    color:var(--wr-branco);
 
 }
 
@@ -48,7 +61,7 @@ body{
     padding:15px 45px;
 
 
-    background:rgba(20,20,20,0.95);
+    background:var(--wr-nav);
 
 
     display:flex;
@@ -78,7 +91,7 @@ body{
 
 .logo{
 
-    color:#e50914;
+    color:var(--wr-dourado);
 
 
     font-size:28px;
@@ -110,7 +123,7 @@ body{
 
     background:none;
 
-    color:#bbb;
+    color:var(--wr-nevoa);
 
 
     border:none;
@@ -130,7 +143,7 @@ body{
 .menuCatalogo button:hover,
 .menuCatalogo .menuAtivo{
 
-    color:white;
+    color:var(--wr-branco);
 
 }
 
@@ -147,10 +160,10 @@ body{
     align-items:center;
 
 
-    background:#222;
+    background:var(--wr-card);
 
 
-    border:1px solid #555;
+    border:1px solid var(--wr-borda);
 
     border-radius:5px;
 
@@ -174,7 +187,7 @@ body{
     outline:none;
 
 
-    color:white;
+    color:var(--wr-branco);
 
 
     padding:8px;
@@ -220,7 +233,7 @@ body{
     border-radius:6px;
 
 
-    border:2px solid white;
+    border:2px solid var(--wr-branco);
 
 
     cursor:pointer;
@@ -244,10 +257,10 @@ body{
     width:160px;
 
 
-    background:#222;
+    background:var(--wr-card);
 
 
-    border:1px solid #444;
+    border:1px solid var(--wr-borda);
 
 
     border-radius:5px;
@@ -286,7 +299,7 @@ body{
     border:none;
 
 
-    color:white;
+    color:var(--wr-branco);
 
 
     text-align:left;
@@ -303,7 +316,7 @@ body{
 .menuPerfil button:hover,
 .menuPerfil a:hover{
 
-    background:#333;
+    background:var(--wr-superficie);
 
 }
 
@@ -336,7 +349,7 @@ body{
 
 .cabecalhoConteudo p{
 
-    color:#aaa;
+    color:var(--wr-nevoa);
 
     margin-top:7px;
 
@@ -378,7 +391,7 @@ body{
 
     max-width:180px;
 
-    background:#1b1b1b;
+    background:var(--wr-card);
 
     border-radius:8px;
 
@@ -401,7 +414,7 @@ body{
 
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.7);
+        0 10px 30px rgba(4,8,20,0.75);
 
 }
 
@@ -448,7 +461,7 @@ body{
 
 .detalhes{
 
-    color:#aaa;
+    color:var(--wr-nevoa);
 
     font-size:12px;
 
@@ -468,7 +481,7 @@ body{
 
 .descricao{
 
-    color:#bbb;
+    color:var(--wr-nevoa);
 
     font-size:13px;
 
@@ -501,9 +514,9 @@ body{
 
     flex:1;
 
-    background:#e50914;
+    background:var(--wr-azul);
 
-    color:white;
+    color:var(--wr-branco);
 
     text-decoration:none;
 
@@ -526,13 +539,13 @@ body{
     width:42px;
 
 
-    background:#333;
+    background:var(--wr-superficie);
 
 
     border:none;
 
 
-    color:white;
+    color:var(--wr-branco);
 
 
     border-radius:5px;
@@ -548,7 +561,7 @@ body{
 
 .botaoFavorito.ativo{
 
-    color:#e50914;
+    color:var(--wr-dourado);
 
 }
 
@@ -558,7 +571,7 @@ body{
 
 .mensagemVazia{
 
-    color:#aaa;
+    color:var(--wr-nevoa);
 
 
     font-size:18px;
@@ -598,4 +611,3 @@ body{
 
 
 }
-

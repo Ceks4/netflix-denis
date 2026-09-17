@@ -1,3 +1,17 @@
+/* PALETA WEATHER REPORT */
+:root{
+    --wr-noite:#080d1a;
+    --wr-fundo:#0e1529;
+    --wr-nav:rgba(14,21,41,0.9);
+    --wr-superficie:#27304d;
+    --wr-card:#1b2541;
+    --wr-azul:#6f91e8;
+    --wr-lilas:#9a86d9;
+    --wr-dourado:#d9bd73;
+    --wr-branco:#f5f7ff;
+    --wr-nevoa:#bdc8e6;
+}
+
 /* RESET */
 *{
     margin:0;
@@ -7,8 +21,8 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background:#141414;
-    color:white;
+    background:var(--wr-fundo);
+    color:var(--wr-branco);
 }
 
 /* NAVBAR */
@@ -22,14 +36,14 @@ body{
     align-items: center;
 
     /* CORREÇÃO */
-    background: rgba(20, 20, 20, 0.85);
+    background:var(--wr-nav);
     backdrop-filter: blur(8px);
 
     z-index: 1000;
 }
 
 .logo{
-    color:#e50914;
+    color:var(--wr-dourado);
     font-size:30px;
     font-weight:bold;
     letter-spacing:2px;
@@ -39,15 +53,15 @@ body{
     width:42px;
     height:42px;
     border-radius:6px;
-    border:2px solid white;
+    border:2px solid var(--wr-branco);
 }
 
 /* BANNER PRINCIPAL (igual Netflix) */
 .banner{
     height:85vh;
     background-image:
-    linear-gradient(to top, #141414 10%, transparent 60%),
-    linear-gradient(to right, rgba(0,0,0,0.8), transparent 60%),
+    linear-gradient(to top, var(--wr-fundo) 10%, transparent 60%),
+    linear-gradient(to right, rgba(8,13,26,0.88), transparent 60%),
     url('/Imagens/imagem\ banner.jpg');   /* coloque sua imagem aqui */
 
     background-size:cover;
@@ -69,15 +83,15 @@ body{
 
 .banner p{
     font-size:20px;
-    color:#ddd;
+    color:var(--wr-nevoa);
     margin-bottom:25px;
     line-height:1.5;
 }
 
 /* BOTÃO */
 .btnAssistir{
-    background:#e50914;
-    color:white;
+    background:var(--wr-azul);
+    color:var(--wr-branco);
     border:none;
     padding:14px 28px;
     font-size:18px;
@@ -88,7 +102,7 @@ body{
 }
 
 .btnAssistir:hover{
-    background:#ff1f2d;
+    background:var(--wr-lilas);
     transform:scale(1.05);
 }
 
@@ -127,7 +141,7 @@ body{
     min-width:180px;
     max-width:180px;
 
-    background:#1b1b1b;
+    background:var(--wr-card);
     border-radius:8px;
     overflow:hidden;
 
@@ -141,7 +155,7 @@ body{
 
 .card:hover{
     transform:translateY(-6px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.7);
+    box-shadow:0 10px 25px rgba(4,8,20,0.75);
 }
 
 /* IMAGEM MENOR E MAIS BONITA */
@@ -166,7 +180,7 @@ body{
 
 .card p{
     font-size:13px;
-    color:#bbb;
+    color:var(--wr-nevoa);
     padding:0 10px;
     line-height:1.4;
 
@@ -197,13 +211,13 @@ body{
 }
 
 .botoes button:first-child{
-    background:#e50914;
-    color:white;
+    background:var(--wr-azul);
+    color:var(--wr-branco);
 }
 
 .botoes button:last-child{
-    background:#333;
-    color:white;
+    background:var(--wr-superficie);
+    color:var(--wr-branco);
 }
 
 .botoes button:hover{
@@ -216,7 +230,7 @@ body{
 /* ============================= */
 
 .paginaPlayer{
-    background:#000;
+    background:var(--wr-noite);
 }
 
 
@@ -238,12 +252,12 @@ body{
 
     aspect-ratio:16 / 9;
 
-    background:#000;
+    background:var(--wr-noite);
 
     border-radius:8px;
     overflow:hidden;
 
-    box-shadow:0 10px 40px rgba(0,0,0,0.8);
+    box-shadow:0 10px 40px rgba(4,8,20,0.85);
 }
 
 /* TELAS MENORES */
@@ -284,7 +298,7 @@ body{
 .infoPlayer p{
     font-size:18px;
 
-    color:#bbb;
+    color:var(--wr-nevoa);
 
     max-width:800px;
 
@@ -295,11 +309,11 @@ body{
 /* BOTÃO VOLTAR */
 
 .voltar{
-    color:white;
+    color:var(--wr-branco);
 
     text-decoration:none;
 
-    background:#333;
+    background:var(--wr-superficie);
 
     padding:10px 18px;
 
@@ -310,16 +324,16 @@ body{
 
 
 .voltar:hover{
-    background:#e50914;
+    background:var(--wr-lilas);
 }
 
 
 /* BOTÃO PLAY DOS CARDS */
 
 .btnPlay{
-    background:#e50914;
+    background:var(--wr-azul);
 
-    color:white;
+    color:var(--wr-branco);
 
     text-decoration:none;
 
@@ -336,7 +350,7 @@ body{
 
 
 .btnPlay:hover{
-    background:#ff1f2d;
+    background:var(--wr-lilas);
 
     transform:scale(1.03);
 }

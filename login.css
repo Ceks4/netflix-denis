@@ -2,6 +2,18 @@
 /* ALTERAÇÃO 21/08 - DESIGN DA TELA DE LOGIN */
 /* ============================================ */
 
+:root{
+    --wr-fundo:#0e1529;
+    --wr-painel:rgba(14,21,41,0.94);
+    --wr-superficie:#27304d;
+    --wr-azul:#6f91e8;
+    --wr-lilas:#9a86d9;
+    --wr-dourado:#d9bd73;
+    --wr-branco:#f5f7ff;
+    --wr-nevoa:#bdc8e6;
+    --wr-borda:#52638d;
+}
+
 
 *{
 
@@ -24,8 +36,8 @@ body{
 
     background:
         linear-gradient(
-            rgba(0,0,0,0.75),
-            rgba(0,0,0,0.75)
+            rgba(8,13,26,0.8),
+            rgba(14,21,41,0.88)
         ),
         url("Imagens/imagem banner.jpg");
 
@@ -37,7 +49,7 @@ body{
     background-attachment:fixed;
 
 
-    color:white;
+    color:var(--wr-branco);
 
 
     min-height:100vh;
@@ -56,7 +68,7 @@ body{
 
 .logo{
 
-    color:#e50914;
+    color:var(--wr-dourado);
 
     font-size:32px;
 
@@ -99,7 +111,7 @@ body{
     max-width:430px;
 
 
-    background:rgba(0,0,0,0.88);
+    background:var(--wr-painel);
 
 
     padding:45px;
@@ -130,9 +142,9 @@ body{
     border:none;
 
 
-    background:#333;
+    background:var(--wr-superficie);
 
-    color:#aaa;
+    color:var(--wr-nevoa);
 
 
     padding:13px;
@@ -147,9 +159,9 @@ body{
 
 .opcoesLogin .opcaoAtiva{
 
-    background:#e50914;
+    background:var(--wr-azul);
 
-    color:white;
+    color:var(--wr-branco);
 
 }
 
@@ -166,7 +178,7 @@ body{
 
 .subtitulo{
 
-    color:#aaa;
+    color:var(--wr-nevoa);
 
     margin-bottom:25px;
 
@@ -197,15 +209,15 @@ body{
     padding:13px;
 
 
-    background:#333;
+    background:var(--wr-superficie);
 
 
-    border:1px solid #555;
+    border:1px solid var(--wr-borda);
 
     border-radius:5px;
 
 
-    color:white;
+    color:var(--wr-branco);
 
 
     outline:none;
@@ -216,7 +228,7 @@ body{
 .caixaLogin input:focus,
 .caixaLogin select:focus{
 
-    border-color:#e50914;
+    border-color:var(--wr-lilas);
 
 }
 
@@ -235,10 +247,10 @@ body{
     padding:13px;
 
 
-    background:#e50914;
+    background:var(--wr-azul);
 
 
-    color:white;
+    color:var(--wr-branco);
 
 
     border:none;
@@ -258,7 +270,7 @@ body{
 
 .botaoPrincipal:hover{
 
-    background:#ff1f2d;
+    background:var(--wr-lilas);
 
 }
 
