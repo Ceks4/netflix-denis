@@ -112,6 +112,22 @@ body{
 
     letter-spacing:2px;
 
+    display:inline-flex;
+
+    align-items:center;
+
+    line-height:0;
+
+}
+
+.logoImagem{
+
+    display:block;
+
+    width:190px;
+
+    height:auto;
+
 }
 
 
@@ -609,6 +625,12 @@ body{
 /* ================================= */
 
 @media(max-width:800px){
+
+    .logoImagem{
+
+        width:145px;
+
+    }
 
 
     .navbarCatalogo{

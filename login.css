@@ -88,6 +88,22 @@ body{
 
     text-decoration:none;
 
+    display:inline-flex;
+
+    align-items:center;
+
+    line-height:0;
+
+}
+
+.logoImagem{
+
+    display:block;
+
+    width:240px;
+
+    height:auto;
+
 }
 
 
@@ -301,5 +317,21 @@ body{
 .formEscondido{
 
     display:none;
+
+}
+
+@media(max-width:600px){
+
+    .topoLogin{
+
+        padding:20px 25px;
+
+    }
+
+    .logoImagem{
+
+        width:175px;
+
+    }
 
 }
