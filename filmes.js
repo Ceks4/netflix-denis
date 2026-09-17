@@ -91,7 +91,7 @@ export const series = [
     {
         id: "Stranger Things",
         titulo: "Stranger Things",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/series/stranger-things.webp",
         descricao: "Um grupo de crianças enfrenta forças sobrenaturais.",
         trailer: "ID_YOUTUBE",
         
@@ -104,7 +104,7 @@ export const series = [
     {
         id: "Dark",
         titulo: "Dark",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/series/dark.webp",
         descricao: "Dark é uma série focada em viagens no tempo e multiversos.",
         trailer: "ID_YOUTUBE",
         
@@ -117,7 +117,7 @@ export const series = [
     {
         id: "Breaking Bad",
         titulo: "Breaking Bad",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/series/breaking-bad.webp",
         descricao: " A série acompanha Walter White e a sua transformação de um homem comum no chefão do tráfico.",
         trailer: "ID_YOUTUBE",
         
@@ -130,7 +130,7 @@ export const series = [
     {
         id: "Peaky Blinders",
         titulo: "Peaky Blinders",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/series/peaky-blinders.webp",
         descricao: "Peaky Blinders acompanha Thomas Shelby e sua gangue em Birmingham após a Primeira Guerra Mundial.",
         trailer: "ID_YOUTUBE",
         
@@ -143,7 +143,7 @@ export const series = [
     {
         id: "Round 6",
         titulo: "Round 6",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/series/round-6.webp",
         descricao: "Centenas de jogadores falidos aceitam um estranho convite para um jogo de sobrevivência. Onde um prêmio milionário aguarda.",
         trailer: "ID_YOUTUBE",
         
@@ -156,7 +156,7 @@ export const series = [
     {
         id: "Avatar A lenda de Aang",
         titulo: "Avatar A lenda de Aang",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/series/avatar-a-lenda-de-aang.webp",
         descricao: "Avatar: A Lenda de Aang acompanha Aang, um menino de 12 anos que acorda após cem anos congelado em um iceberg.",
         trailer: "ID_YOUTUBE",
         
