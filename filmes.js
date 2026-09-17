@@ -4,7 +4,7 @@ export const filmes = [
     {
         id: "interestelar",
         titulo: "Interestelar",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/filmes/interestelar.webp",
         descricao: "Um grupo de astronautas viaja através de um buraco de minhoca em busca de um novo lar para a humanidade.",
         trailer: "i6avfCqKcQo?si=c67bqEGle7cgphln",
 
@@ -18,7 +18,7 @@ export const filmes = [
     {
         id: "Batman",
         titulo: "Batman",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/filmes/batman.webp",
         descricao: "Em Batman: O Cavaleiro das Trevas, a paz é ameaçada pelo Coringa, um anarquista que instaura o caos.",
         trailer: "ID_YOUTUBE",
 
@@ -32,7 +32,7 @@ export const filmes = [
     {
         id: "Ong Bak",
         titulo: "Ong Bak",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/filmes/ong-bak.webp",
         descricao: "Ong-Bak: Guerreiro Sagrado, acompanha Ting (Tony Jaa), um jovem guerreiro de uma pacata vila tailandesa.",
         trailer: "ID_YOUTUBE",
 
@@ -46,7 +46,7 @@ export const filmes = [
     {
         id: "Kung-Fusão",
         titulo: "Kung-Fusão",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/filmes/kung-fusao.webp",
         descricao: "A história acompanha Sing, um malandro trapalhão que tenta entrar para a temida Gangue do Machado.",
         trailer: "ID_YOUTUBE",
         
@@ -60,7 +60,7 @@ export const filmes = [
     {
         id: "Homem Aranha",
         titulo: "Homem Aranha",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/filmes/homem-aranha.webp",
         descricao: "O jovem Peter Parker que, após ser picado por uma aranha, ganha superpoderes como força, agilidade e a capacidade de escalar paredes.",
         trailer: "ID_YOUTUBE",
         
@@ -74,7 +74,7 @@ export const filmes = [
     {
         id: "Capitão América: Guerra Civil",
         titulo: "Capitão América: Guerra Civil",
-        imagem: "Imagens/imagem.jpg",
+        imagem: "Imagens/Capas/filmes/capitao-america-guerra-civil.webp",
         descricao: "Após danos colaterais em missões dos Vingadores, a ONU propõe o Tratado de Sokovia, um acordo para regulamentar e controlar a equipe.",
         trailer: "ID_YOUTUBE",
         
