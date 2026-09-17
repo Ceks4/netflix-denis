@@ -83,7 +83,7 @@ body{
     background-image:
     linear-gradient(to top, var(--wr-fundo) 10%, transparent 60%),
     linear-gradient(to right, rgba(8,13,26,0.88), transparent 60%),
-    url('/Imagens/imagem\ banner.jpg');   /* coloque sua imagem aqui */
+    url('Imagens/imagem banner.jpg');   /* coloque sua imagem aqui */
 
     background-size:cover;
     background-position:center;
@@ -404,7 +404,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;op
 .navbar>*{transform:skewY(.25deg)}
 .logoImagem{filter:drop-shadow(4px 5px 0 var(--jojo-preto)) drop-shadow(-2px -1px 0 var(--jojo-ciano))}
 .fotoPerfil{border:3px solid var(--jojo-rosa);border-radius:0;transform:rotate(4deg);box-shadow:4px 4px 0 var(--jojo-preto)}
-.banner{min-height:680px;position:relative;isolation:isolate;overflow:hidden;background-image:linear-gradient(to top,#0e1529 4%,transparent 64%),linear-gradient(105deg,rgba(8,7,17,.96) 8%,rgba(112,43,189,.72) 48%,rgba(255,47,146,.16) 76%),url('/Imagens/imagem\ banner.jpg')}
+.banner{min-height:680px;position:relative;isolation:isolate;overflow:hidden;background-image:linear-gradient(to top,#0e1529 4%,transparent 64%),linear-gradient(105deg,rgba(8,7,17,.96) 8%,rgba(112,43,189,.72) 48%,rgba(255,47,146,.16) 76%),url('Imagens/imagem banner.jpg')}
 .banner::before{content:"";position:absolute;inset:-20%;z-index:-1;opacity:.18;background:repeating-conic-gradient(from 215deg at 82% 48%,transparent 0 5deg,var(--jojo-amarelo) 5.5deg 6deg);animation:girarEnergia 18s linear infinite}
 .banner-conteudo{position:relative;z-index:2;max-width:640px;transform:rotate(-1deg)}
 .banner h1{max-width:620px;font-size:clamp(42px,6vw,78px);line-height:.92;text-transform:uppercase;color:#fff;text-shadow:4px 4px 0 var(--jojo-roxo),8px 8px 0 var(--jojo-preto)}
@@ -416,7 +416,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;op
 .lista h2{font-size:28px;text-transform:uppercase;text-shadow:3px 3px 0 var(--jojo-roxo)}
 .lista h2 span{color:var(--jojo-rosa);font-size:42px;margin-right:10px;-webkit-text-stroke:1px var(--jojo-preto)}
 .carrossel{gap:22px;padding:12px 8px 24px}
-.card{position:relative;border:3px solid var(--jojo-preto);border-radius:0;overflow:visible;background:linear-gradient(155deg,#27304d,#11172d);box-shadow:7px 7px 0 var(--jojo-roxo),10px 10px 0 var(--jojo-preto);clip-path:polygon(0 0,92% 0,100% 7%,100% 100%,8% 100%,0 93%)}
+.card{position:relative;border:3px solid var(--jojo-preto);border-radius:0;overflow:visible;background:linear-gradient(155deg,#27304d,#11172d);box-shadow:7px 7px 0 var(--jojo-roxo),10px 10px 0 var(--jojo-preto);clip-path:polygon(0 0,92% 0,100% 7%,100% 100%,8% 100%,0 93%);animation:entradaBizarra .55s both;animation-delay:calc(var(--ordem,0)*55ms)}
 .card:hover{transform:translateY(-10px) rotate(-1deg);box-shadow:10px 13px 0 var(--jojo-rosa),14px 17px 0 var(--jojo-preto)}
 .capaCard{height:250px;overflow:hidden;border-bottom:3px solid var(--jojo-preto)}
 .capaCard img,.card img{height:100%;width:100%;object-fit:cover;transition:transform .45s,filter .45s}
@@ -428,4 +428,6 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;op
 .paginaPlayer .seloParte{margin-bottom:12px}
 @keyframes ameaca{to{transform:rotate(-6deg) scale(1.04);opacity:.48}}
 @keyframes girarEnergia{to{transform:rotate(360deg)}}
+@keyframes entradaBizarra{from{opacity:0;transform:translateY(28px) rotate(2deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
 @media(max-width:700px){.navbar{padding:12px 20px}.logoImagem{width:165px}.banner{padding:120px 25px 80px;min-height:650px;align-items:flex-end}.banner h1{font-size:44px}.container{padding-left:20px;padding-right:20px}.mangaSfx{top:14vh;right:7vw;font-size:72px}}
+@media(prefers-reduced-motion:reduce){.card,.mangaSfx,.banner::before{animation:none!important}.card,.card img{transition:none!important}}

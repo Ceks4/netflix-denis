@@ -4,15 +4,15 @@ import { filmes, series } from "./filmes.js";
     // FUNÇÃO CRIAR CARD
     // =========================
     
-    function criarCard(item, tipo){
+    function criarCard(item, tipo, ordem = 0){
 
         return `
-            <div class="card card-${tipo}">
+            <div class="card card-${tipo}" style="--ordem:${ordem}">
 
                 <span class="seloCard">${tipo === "filme" ? "FILME" : "SÉRIE"}</span>
     
                 <div class="capaCard">
-                    <img src="${item.imagem}" alt="${item.titulo}">
+                    <img src="${item.imagem}" alt="Capa de ${item.titulo}" loading="lazy" decoding="async">
                 </div>
     
                 <h3>${item.titulo}</h3>
@@ -22,7 +22,7 @@ import { filmes, series } from "./filmes.js";
                 <div class="botoes">
     
                     <a
-                        href="player.html?tipo=${tipo}&id=${item.id}"
+                        href="player.html?tipo=${tipo}&id=${encodeURIComponent(item.id)}"
                         class="btnPlay"
                     >
                         ▶ Assistir
@@ -53,12 +53,12 @@ import { filmes, series } from "./filmes.js";
         listaSeries.innerHTML = "";
     
     
-        filmes.forEach(function(f){
-            listaFilmes.innerHTML += criarCard(f, "filme");
+        filmes.forEach(function(f, indice){
+            listaFilmes.innerHTML += criarCard(f, "filme", indice);
         });
         
-        series.forEach(function(s){
-            listaSeries.innerHTML += criarCard(s, "serie");
+        series.forEach(function(s, indice){
+            listaSeries.innerHTML += criarCard(s, "serie", indice);
         });
     
     }

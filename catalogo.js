@@ -144,7 +144,7 @@ function alterarFavorito(chave){
 // ALTERAÇÃO 21/08 - CRIAR CARD
 // ==============================================
 
-function criarCard(item, tipo){
+function criarCard(item, tipo, ordem = 0){
 
 
     const chave =
@@ -174,7 +174,7 @@ function criarCard(item, tipo){
 
     return `
 
-        <div class="cardCatalogo card-${tipo}">
+        <div class="cardCatalogo card-${tipo}" style="--ordem:${ordem}">
 
             <span class="seloCard">
 
@@ -186,7 +186,9 @@ function criarCard(item, tipo){
 
                 <img
                     src="${item.imagem}"
-                    alt="${item.titulo}"
+                    alt="Capa de ${item.titulo}"
+                    loading="lazy"
+                    decoding="async"
                 >
 
             </div>
@@ -234,7 +236,7 @@ function criarCard(item, tipo){
 
 
                     <a
-                        href="player.html?tipo=${tipo}&id=${item.id}"
+                        href="player.html?tipo=${tipo}&id=${encodeURIComponent(item.id)}"
                         class="assistirCatalogo"
                     >
 
@@ -440,7 +442,7 @@ function mostrarConteudos(){
     // ==========================================
 
     conteudos.forEach(
-        function(item){
+        function(item, indice){
 
 
             gradeCatalogo.innerHTML +=
@@ -449,7 +451,9 @@ function mostrarConteudos(){
 
                     item.dados,
 
-                    item.tipo
+                    item.tipo,
+
+                    indice
 
                 );
 
