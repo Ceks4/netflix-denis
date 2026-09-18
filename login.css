@@ -89,6 +89,30 @@ button,input,select{font:inherit}
 .opcoesLogin .opcaoAtiva{color:#fff}
 .opcoesLogin .opcaoAtiva::after{content:'';position:absolute;inset:auto 0 -1px;height:2px;background:var(--rosa)}
 
+.contaTeste{
+    margin-bottom:18px;
+    padding:11px 12px;
+    display:grid;
+    gap:3px;
+    background:#100f13;
+    border:1px solid var(--borda);
+    border-radius:4px;
+    color:var(--texto-suave);
+    font-size:11px;
+    line-height:1.45;
+}
+
+.contaTeste strong{color:#ddd8e0;font-size:12px}
+
+.mensagemFormulario{
+    min-height:18px;
+    margin-bottom:5px;
+    color:#ff8097;
+    font-size:12px;
+}
+
+.mensagemFormulario.sucesso{color:#81d69c}
+
 .caixaLogin h1{
     margin-bottom:7px;
     font-family:var(--fonte-destaque);

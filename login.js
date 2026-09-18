@@ -1,111 +1,118 @@
-// ==============================================
-// ALTERAÇÃO 21/08 - LOGIN E CADASTRO SIMULADOS
-// ==============================================
+const CHAVE_USUARIOS = "bizarreflixUsuarios";
+const CHAVE_SESSAO = "bizarreflixSessao";
 
+const contaTeste = {
+    nome: "Jotaro Kujo",
+    genero: "masculino",
+    nascimento: "1970-02-20",
+    email: "jotaro@bizarreflix.com",
+    senha: "oraora123"
+};
 
-const botaoEntrar =
-    document.getElementById("botaoEntrar");
+const botaoEntrar = document.getElementById("botaoEntrar");
+const botaoCadastro = document.getElementById("botaoCadastro");
+const formLogin = document.getElementById("formLogin");
+const formCadastro = document.getElementById("formCadastro");
+const mensagemFormulario = document.getElementById("mensagemFormulario");
 
-
-const botaoCadastro =
-    document.getElementById("botaoCadastro");
-
-
-const formLogin =
-    document.getElementById("formLogin");
-
-
-const formCadastro =
-    document.getElementById("formCadastro");
-
-
-
-// ========================================
-// ALTERAÇÃO 21/08 - MOSTRAR LOGIN
-// ========================================
-
-botaoEntrar.addEventListener(
-    "click",
-    function(){
-
-        formLogin.style.display = "block";
-
-        formCadastro.style.display = "none";
-
-
-        botaoEntrar.classList.add(
-            "opcaoAtiva"
-        );
-
-
-        botaoCadastro.classList.remove(
-            "opcaoAtiva"
-        );
-
+function lerUsuarios(){
+    try{
+        return JSON.parse(localStorage.getItem(CHAVE_USUARIOS)) || [];
+    }catch{
+        return [];
     }
-);
+}
 
+function salvarUsuarios(usuarios){
+    localStorage.setItem(CHAVE_USUARIOS, JSON.stringify(usuarios));
+}
 
+function iniciarContaTeste(){
+    const usuarios = lerUsuarios();
+    const existe = usuarios.some(usuario => usuario.email === contaTeste.email);
 
-// ========================================
-// ALTERAÇÃO 21/08 - MOSTRAR CADASTRO
-// ========================================
-
-botaoCadastro.addEventListener(
-    "click",
-    function(){
-
-        formLogin.style.display = "none";
-
-        formCadastro.style.display = "block";
-
-
-        botaoCadastro.classList.add(
-            "opcaoAtiva"
-        );
-
-
-        botaoEntrar.classList.remove(
-            "opcaoAtiva"
-        );
-
+    if(!existe){
+        usuarios.push(contaTeste);
+        salvarUsuarios(usuarios);
     }
-);
+}
 
+function mostrarMensagem(texto, sucesso = false){
+    mensagemFormulario.textContent = texto;
+    mensagemFormulario.classList.toggle("sucesso", sucesso);
+}
 
+function trocarFormulario(tipo){
+    const entrando = tipo === "entrar";
 
-// ========================================
-// ALTERAÇÃO 21/08 - LOGIN SIMULADO
-// ========================================
+    formLogin.style.display = entrando ? "block" : "none";
+    formCadastro.style.display = entrando ? "none" : "block";
+    botaoEntrar.classList.toggle("opcaoAtiva", entrando);
+    botaoCadastro.classList.toggle("opcaoAtiva", !entrando);
+    mostrarMensagem("");
+}
 
-formLogin.addEventListener(
-    "submit",
-    function(event){
+function abrirCatalogo(usuario){
+    const sessao = {
+        nome: usuario.nome,
+        email: usuario.email,
+        conectadoEm: new Date().toISOString()
+    };
 
-        event.preventDefault();
+    localStorage.setItem(CHAVE_SESSAO, JSON.stringify(sessao));
+    window.location.href = "catalogo.html";
+}
 
+botaoEntrar.addEventListener("click", () => trocarFormulario("entrar"));
+botaoCadastro.addEventListener("click", () => trocarFormulario("cadastro"));
 
-        window.location.href =
-            "catalogo.html";
+formLogin.addEventListener("submit", function(event){
+    event.preventDefault();
 
+    const email = document.getElementById("emailLogin").value.trim().toLowerCase();
+    const senha = document.getElementById("senhaLogin").value;
+    const usuario = lerUsuarios().find(item => item.email === email && item.senha === senha);
+
+    if(!usuario){
+        mostrarMensagem("Email ou senha incorretos.");
+        return;
     }
-);
 
+    mostrarMensagem("Login feito. Abrindo o catálogo...", true);
+    abrirCatalogo(usuario);
+});
 
+formCadastro.addEventListener("submit", function(event){
+    event.preventDefault();
 
-// ========================================
-// ALTERAÇÃO 21/08 - CADASTRO SIMULADO
-// ========================================
+    const nome = document.getElementById("nomeCadastro").value.trim();
+    const genero = document.getElementById("generoCadastro").value;
+    const nascimento = document.getElementById("nascimentoCadastro").value;
+    const email = document.getElementById("emailCadastro").value.trim().toLowerCase();
+    const senha = document.getElementById("senhaCadastro").value;
+    const confirmarSenha = document.getElementById("confirmarSenhaCadastro").value;
+    const usuarios = lerUsuarios();
 
-formCadastro.addEventListener(
-    "submit",
-    function(event){
-
-        event.preventDefault();
-
-
-        window.location.href =
-            "catalogo.html";
-
+    if(senha.length < 6){
+        mostrarMensagem("A senha precisa ter pelo menos 6 caracteres.");
+        return;
     }
-);
+
+    if(senha !== confirmarSenha){
+        mostrarMensagem("As senhas não são iguais.");
+        return;
+    }
+
+    if(usuarios.some(usuario => usuario.email === email)){
+        mostrarMensagem("Esse email já está cadastrado.");
+        return;
+    }
+
+    const novoUsuario = {nome, genero, nascimento, email, senha};
+    usuarios.push(novoUsuario);
+    salvarUsuarios(usuarios);
+    mostrarMensagem("Conta criada. Abrindo o catálogo...", true);
+    abrirCatalogo(novoUsuario);
+});
+
+iniciarContaTeste();

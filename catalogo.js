@@ -8,6 +8,20 @@ import {
     series
 } from "./filmes.js";
 
+let sessaoAtual = null;
+
+try{
+    sessaoAtual = JSON.parse(
+        localStorage.getItem("bizarreflixSessao")
+    );
+}catch{
+    sessaoAtual = null;
+}
+
+if(!sessaoAtual){
+    window.location.replace("login.html");
+}
+
 
 
 // ==============================================
@@ -24,6 +38,11 @@ const campoPesquisa =
 
 const tituloCatalogo =
     document.getElementById("tituloCatalogo");
+
+
+const chaveFavoritos =
+    "bizarreflixFavoritos:" +
+    (sessaoAtual?.email || "visitante");
 
 
 
@@ -43,7 +62,7 @@ function pegarFavoritos(){
 
     const dados =
         localStorage.getItem(
-            "bizarreflixFavoritos"
+            chaveFavoritos
         );
 
 
@@ -69,7 +88,7 @@ function salvarFavoritos(lista){
 
     localStorage.setItem(
 
-        "bizarreflixFavoritos",
+        chaveFavoritos,
 
         JSON.stringify(lista)
 
@@ -631,6 +650,19 @@ const menuPerfil =
     );
 
 
+const nomeUsuario =
+    document.getElementById("nomeUsuario");
+
+
+if(sessaoAtual && nomeUsuario){
+    const primeiroNome =
+        sessaoAtual.nome.split(" ")[0];
+
+    nomeUsuario.textContent =
+        "OLÁ, " + primeiroNome.toUpperCase();
+}
+
+
 
 fotoUsuario.addEventListener(
     "click",
@@ -678,6 +710,18 @@ document
             mostrarConteudos();
 
 
+        }
+    );
+
+
+document
+    .getElementById("sairConta")
+    .addEventListener(
+        "click",
+        function(event){
+            event.preventDefault();
+            localStorage.removeItem("bizarreflixSessao");
+            window.location.href = "index.html";
         }
     );
 
