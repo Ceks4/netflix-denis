@@ -73,7 +73,7 @@ button,a{-webkit-tap-highlight-color:transparent}
     background:
         linear-gradient(90deg,rgba(8,7,11,.96) 0%,rgba(8,7,11,.73) 44%,rgba(8,7,11,.12) 78%),
         linear-gradient(0deg,var(--fundo) 0%,transparent 30%),
-        url('Imagens/banner-filmes-v2.webp') center/cover no-repeat;
+        url('Imagens/banner-jojo-v3.webp') center/cover no-repeat;
 }
 
 .banner-conteudo{max-width:610px}
